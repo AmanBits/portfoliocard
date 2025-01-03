@@ -10,7 +10,7 @@ A beautifully designed portfolio card showcasing all my social media links, comp
 
 ## 🚀 Demo
 [Live Demo](https://www.mohammadaman.work.gd/)  
-*(Replace `#` with the link to your hosted project)*
+
 
 ## 📋 Installation
 
