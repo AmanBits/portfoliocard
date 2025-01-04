@@ -41,18 +41,6 @@ Navigate to the Project Folder:
     CSS3: For styling and animations.
     JavaScript: For interactivity and background music.
 
-🎨 Preview
-💻 Desktop View:
-
-📱 Mobile View:
-
-🌐 Social Media
-
-Stay connected:
-
-    🌟 GitHub
-    🐦 Twitter
-    💼 LinkedIn
 
 📢 Support
 
