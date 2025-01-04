@@ -1,29 +1,32 @@
-🖼️ Portfolio Card with Social Media Links and Background Music 🎵
+Portfolio Card with Social Media Links and Background Music 🎵
 
-A beautifully designed portfolio card showcasing all my social media links, with a touch of background music to elevate the user experience!
+A beautifully designed portfolio card showcasing all my social media links, complemented by a background song to set the mood!
 🌟 Features
 
-✨ Interactive Design: Clickable social media icons for easy navigation.
-🎵 Background Music: Plays a selected song for an immersive experience.
-📱 Responsive Layout: Works seamlessly across devices.
-🛠️ Customizable: Easily update links and the song to your preference.
+    Interactive Design: Clickable social media icons for easy navigation.
+    Background Music: Plays a selected song for an engaging experience.
+    Responsive Layout: Works seamlessly across devices.
+    Customizable: Easily update links and the song to your preference.
+
 🚀 Demo
 
-🎉 See it Live: Live Demo
-🛠️ Installation
+Live Demo
+📋 Installation
 
-Set up the project in just a few steps!
+Follow these steps to set up the project locally:
 
-    Clone this Repository:
+    Clone this repository:
 
-git clone https://github.com/amanbits/portfoliocard.git  
+    git clone https://github.com/amanbits/portfoliocard.git
 
-Navigate to the Project Folder:
+    Navigate to the Project Folder:
 
     cd portfoliocard  
 
     Open in Your Favorite Browser:
+    
     Open index.html to see the magic live!
+
 
 🖌️ Customization
 
@@ -34,6 +37,7 @@ Navigate to the Project Folder:
 
     Background Music:
     Replace the song in the /music folder with your own and update the src in the HTML file.
+
 
 💻 Technologies Used
 
@@ -46,3 +50,4 @@ Navigate to the Project Folder:
 
 💌 Found this useful? Give it a ⭐ on GitHub!
 📩 Questions or suggestions? Contact me at mohammad.aman.dev@outlook.com
+
