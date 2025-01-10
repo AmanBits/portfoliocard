@@ -181,7 +181,7 @@
             top: 10px;
             right: 10px;
             background-color: #ffd700;
-            color: #FFFFFF;
+            color: #111;
             padding: 5px 10px;
             border-radius: 50px;
             font-size: 0.9rem;
@@ -198,7 +198,7 @@
 
         .map-container {
             width: 100%;
-            height: 100px;
+            height: 300px;
             margin-top: 20px;
             display: none; /* Initially hidden */
         }
@@ -221,6 +221,13 @@
             background-color: #ffd700;
             color: #111;
         }
+
+        .clock {
+            font-size: 1.2rem;
+            color: white;
+            margin-top: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -231,7 +238,7 @@
     <div class="profile-card">
         <div class="experience">
             <i class="fas fa-briefcase"></i>
-            <span>2+</span>
+            <span>2+ Years</span>
         </div>
         <div class="image-container">
             <img src="self.jpg" alt="Profile Image" class="profile-image">
@@ -276,6 +283,9 @@
 
         <!-- Map Container -->
         <div class="map-container" id="map"></div>
+
+        <!-- Clock -->
+        <div class="clock" id="clock"></div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -289,6 +299,9 @@
             audio.play().catch((err) => {
                 console.error('Audio autoplay blocked', err);
             });
+
+            updateClock(); // Update clock on load
+            setInterval(updateClock, 1000); // Update clock every second
         };
 
         // Play/Pause Button functionality
@@ -315,26 +328,34 @@
             const mapContainer = document.getElementById('map');
             const mapIcon = document.getElementById('map-icon');
 
-            if (mapContainer.style.display === "none") {
+            if (mapContainer.style.display === "none" || mapContainer.style.display === "") {
                 mapContainer.style.display = "block";
-                initializeMap();
+                initializeMap(); // Initialize map when shown
             } else {
                 mapContainer.style.display = "none";
             }
         }
 
+        // Initialize the Leaflet map
         function initializeMap() {
-    const map = L.map('map').setView([28.6139, 77.2090], 5); // Coordinates for New Delhi, India, with zoom level 5
+            const map = L.map('map').setView([28.6139, 77.2090], 13); // New Delhi, India
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-    // You can also add a marker for New Delhi or another city
-    L.marker([28.6139, 77.2090]).addTo(map)
-        .bindPopup("<b>New Delhi</b><br>Capital of India.")
-        .openPopup();
-}
+            // Add a marker to the map
+            L.marker([28.6139, 77.2090]).addTo(map)
+                .bindPopup("New Delhi, India")
+                .openPopup();
+        }
+
+        // Update the clock every second
+        function updateClock() {
+            const clock = document.getElementById('clock');
+            const time = new Date().toLocaleTimeString();
+            clock.innerText = time;
+        }
     </script>
 </body>
 </html>
